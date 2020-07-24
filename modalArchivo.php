@@ -1,0 +1,79 @@
+<?php
+require("business/Administrator.php");
+require("business/LogAdministrator.php");
+require("business/Capitulo.php");
+require("business/Subcapitulo.php");
+require("business/Seccion.php");
+require("business/Visitante.php");
+require("business/Visita.php");
+require("business/Archivo.php");
+require("business/DocumentoJuridico.php");
+require("business/Sector.php");
+require("business/Entidades.php");
+require("business/Ciudad.php");
+require("business/Pais.php");
+require("business/Naturaleza.php");
+require("business/AreaInfluencia.php");
+require("business/Aplicabilidad.php");
+require("business/Normatividad.php");
+require("business/Referencias.php");
+require("business/DependenciaContacto.php");
+require("business/RelacionActoresEntidad.php");
+require("business/Tema.php");
+require("business/TemaNormatividad.php");
+require("business/TemaReferencias.php");
+require("business/TemaRelacionActoresEntidad.php");
+require_once("persistence/Connection.php");
+$idArchivo = $_GET ['idArchivo'];
+$archivo = new Archivo($idArchivo);
+$archivo -> select();
+?>
+<script charset="utf-8">
+	$(function () { 
+		$("[data-toggle='tooltip']").tooltip(); 
+	}); 
+</script>
+<div class="modal-header">
+	<h4 class="modal-title">Archivo</h4>
+	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+</div>
+<div class="modal-body">
+	<table class="table table-striped table-hover">
+		<tr>
+			<th>Nombre</th>
+			<td><?php echo $archivo -> getNombre() ?></td>
+		</tr>
+		<tr>
+			<th>Descripcion</th>
+			<td><?php echo $archivo -> getDescripcion() ?></td>
+		</tr>
+		<tr>
+			<th>Url</th>
+			<td><?php echo $archivo -> getUrl() ?></td>
+		</tr>
+		<tr>
+			<th>Fechapublicacion</th>
+			<td><?php echo $archivo -> getFechapublicacion() ?></td>
+		</tr>
+		<tr>
+			<th>Fechatemporalidad</th>
+			<td><?php echo $archivo -> getFechatemporalidad() ?></td>
+		</tr>
+		<tr>
+			<th>Fuente</th>
+			<td><?php echo $archivo -> getFuente() ?></td>
+		</tr>
+		<tr>
+			<th>Subcapitulo</th>
+			<td><?php echo $archivo -> getSubcapitulo() -> getNombre() ?></td>
+		</tr>
+		<tr>
+			<th>Tema</th>
+			<td><?php echo $archivo -> getTema() -> getDescripcion() ?></td>
+		</tr>
+		<tr>
+			<th>Seccion</th>
+			<td><?php echo $archivo -> getSeccion() -> getNombre() ?></td>
+		</tr>
+	</table>
+</div>

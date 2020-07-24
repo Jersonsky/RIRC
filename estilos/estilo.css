@@ -1,0 +1,79 @@
+body{
+background: url('imagen.jpg') center center no-repeat;
+background-attachment: fixed, scroll;
+background-repeat: no-repeat, repeat-y;
+background-size: cover;
+}
+
+.inicio{
+	background: url('../image/programador.jpg') center center no-repeat;
+	background-attachment: fixed, scroll;
+	background-repeat: no-repeat, repeat-y;
+	background-size: cover;
+}
+
+.inicio2{
+	background: url('../image/programador.jpg') center center no-repeat;
+	background-attachment: fixed, scroll;
+	background-repeat: no-repeat, repeat-y;
+	background-size: cover;	
+}
+
+.inicio3{
+	background: url('../image/reunion.png') center center no-repeat;
+	background-attachment: fixed, scroll;
+	background-repeat: no-repeat, repeat-y;
+	background-size: cover;
+}
+
+.navbar-nav li:hover > ul.dropdown-menu {
+    display: block;
+}
+.dropdown-submenu {
+    position:relative;
+}
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top:-6px;
+}
+
+rotate caret on hover
+.dropdown-menu > li > a:hover:after {
+    text-decoration: underline;
+    transform: rotate(-90deg);
+} 
+
+ 
+/* menu */
+.masthead {
+  margin-bottom: 2rem;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+}
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 400;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: #2D5807;
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
